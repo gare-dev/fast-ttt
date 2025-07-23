@@ -1,6 +1,6 @@
 import express from "express"
-import { UserSessionRepository } from "../../../repositories/UserSessionRepository.js";
-import { UserSessionService } from "../../../services/UserSessionService.js";
+import { UserSessionRepository } from "../repositories/UserSessionRepository.js";
+import { UserSessionService } from "../services/UserSessionService.js";
 
 
 const router = express.Router()

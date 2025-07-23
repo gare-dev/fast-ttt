@@ -26,9 +26,9 @@ jobs:
      run: npm install
      working-directory: ${{ matrix.directory }}
 
-   #  - name: Run tests
-   #    run: npm test
-   #    working-directory: ${{ matrix.directory }}
+   - name: Run tests
+     run: npm dev:server_tests
+     working-directory: ${{ matrix.directory }}
 
    - name: Build (only client)
      if: matrix.directory == 'client'

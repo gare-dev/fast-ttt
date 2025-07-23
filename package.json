@@ -6,7 +6,8 @@
     ],
     "scripts": {
         "dev:client": "npm --workspace client run dev",
-        "dev:server": "nodemon --exec node --loader ts-node/esm server/src/http/server.ts",
+        "dev:server": "nodemon --exec node --loader ts-node/esm server/src/http/index.ts",
+        "dev:server_tests": "npm --workspace server run test",
         "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
     },
     "devDependencies": {
@@ -16,6 +17,7 @@
         "@types/express": "^5.0.3",
         "@types/mongoose": "^5.11.97",
         "concurrently": "^8.0.0",
+        "ts-node": "^10.9.2",
         "ts-node-dev": "^2.0.0"
     },
     "dependencies": {
