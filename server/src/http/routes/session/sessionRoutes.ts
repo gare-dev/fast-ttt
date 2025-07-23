@@ -1,6 +1,6 @@
 import express from "express"
-import { UserSessionRepository } from "../../repositories/UserSessionRepository";
-import { UserSessionService } from "../../services/UserSessionService";
+import { UserSessionRepository } from "../../../repositories/UserSessionRepository.js";
+import { UserSessionService } from "../../../services/UserSessionService.js";
 
 
 const router = express.Router()
@@ -11,6 +11,13 @@ router.post("/session", async (req, res) => {
     const newSession = await service.createSession(username)
     return res.status(201).json({
         sessionId: newSession.sessionId
+    })
+})
+
+router.get("/sessions", async (req, res) => {
+    const response = await service.returnAllSessions()
+    return res.status(200).json({
+        data: response
     })
 })
 
