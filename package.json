@@ -7,7 +7,8 @@
     "scripts": {
         "dev:client": "npm --workspace client run dev",
         "dev:server": "nodemon --exec node --loader ts-node/esm server/src/http/index.ts",
-        "dev:server_tests": "npm --workspace server run test",
+        "dev:server_unit_tests": "npm --workspace server run test:unit",
+        "dev:server_integration_tests": "npm --workspace server run test:integration",
         "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
     },
     "devDependencies": {
