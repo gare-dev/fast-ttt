@@ -1,4 +1,4 @@
-import { CreateUserSessionDTO, IUserSession, UserSession } from "../db/models/UserSession";
+import { CreateUserSessionDTO, IUserSession, UserSession } from "../db/models/UserSession.js";
 
 
 export class UserSessionRepository {
@@ -12,5 +12,9 @@ export class UserSessionRepository {
 
     async findByUserName(username: string): Promise<IUserSession | null> {
         return await UserSession.findOne({ username })
+    }
+
+    async returnAllUsers(): Promise<IUserSession[] | null> {
+        return await UserSession.find()
     }
 }

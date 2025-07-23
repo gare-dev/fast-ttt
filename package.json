@@ -6,7 +6,9 @@
     ],
     "scripts": {
         "dev:client": "npm --workspace client run dev",
-        "dev:server": "npm --workspace server run dev",
+        "dev:server": "nodemon --exec node --loader ts-node/esm server/src/http/index.ts",
+        "dev:server_unit_tests": "npm --workspace server run test:unit",
+        "dev:server_integration_tests": "npm --workspace server run test:integration",
         "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
     },
     "devDependencies": {
@@ -15,7 +17,9 @@
         "@types/dotenv": "^8.2.3",
         "@types/express": "^5.0.3",
         "@types/mongoose": "^5.11.97",
-        "concurrently": "^8.0.0"
+        "concurrently": "^8.0.0",
+        "ts-node": "^10.9.2",
+        "ts-node-dev": "^2.0.0"
     },
     "dependencies": {
         "body-parser": "^2.2.0",
@@ -23,6 +27,8 @@
         "dotenv": "^17.2.0",
         "express": "^5.1.0",
         "mongoose": "^8.16.4",
+        "nodemon": "^3.1.10",
+        "typescript": "^5.8.3",
         "uuid": "^11.1.0"
     }
 }
