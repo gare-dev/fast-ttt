@@ -1,0 +1,28 @@
+{
+    "private": true,
+    "workspaces": [
+        "client",
+        "server"
+    ],
+    "scripts": {
+        "dev:client": "npm --workspace client run dev",
+        "dev:server": "npm --workspace server run dev",
+        "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.19.6",
+        "@types/cors": "^2.8.19",
+        "@types/dotenv": "^8.2.3",
+        "@types/express": "^5.0.3",
+        "@types/mongoose": "^5.11.97",
+        "concurrently": "^8.0.0"
+    },
+    "dependencies": {
+        "body-parser": "^2.2.0",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.0",
+        "express": "^5.1.0",
+        "mongoose": "^8.16.4",
+        "uuid": "^11.1.0"
+    }
+}
