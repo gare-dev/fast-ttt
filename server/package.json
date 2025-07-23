@@ -19,5 +19,8 @@
     "supertest": "^7.1.4",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "mongoose": "^8.16.4"
   }
 }

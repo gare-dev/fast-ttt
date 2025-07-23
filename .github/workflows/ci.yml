@@ -21,9 +21,8 @@ jobs:
      with:
       node-version: "18"
 
-   - name: Install dependencies
+   - name: Install all dependencies (monorepo)
      run: npm install
-     working-directory: ${{ matrix.directory }}
 
    - name: Build (only client)
      if: matrix.directory == 'client'
@@ -42,9 +41,8 @@ jobs:
      with:
       node-version: "18"
 
-   - name: Install server dependencies
+   - name: Install all dependencies (monorepo)
      run: npm install
-     working-directory: server
 
    - name: Run integration tests
      run: npm run test:integration
@@ -62,9 +60,8 @@ jobs:
      with:
       node-version: "18"
 
-   - name: Install server dependencies
+   - name: Install all dependencies (monorepo)
      run: npm install
-     working-directory: server
 
    - name: Run unit tests
      run: npm run test:unit

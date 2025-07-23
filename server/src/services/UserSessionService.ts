@@ -1,4 +1,4 @@
-import validateNickname from "../../utils/validateNickname";
+import validateNickname from "../../utils/validateNickname.js";
 import { BadRequestError } from "../errors/BadRequest.js";
 import { ConflictError } from "../errors/ConflictError.js";
 import { UserSessionRepository } from "../repositories/UserSessionRepository.js";
